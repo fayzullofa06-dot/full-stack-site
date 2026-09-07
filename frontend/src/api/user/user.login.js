@@ -3,7 +3,9 @@ const API = import.meta.env.VITE_API_URL;
 
     export async function login (form){
         try {
-            
+                    console.log("API =", API);
+        console.log("LOGIN URL =", `${API}/user/login`);
+
             const login= await fetch(`${API}/user/login`,{
                 method:"POST",
                 headers:{
