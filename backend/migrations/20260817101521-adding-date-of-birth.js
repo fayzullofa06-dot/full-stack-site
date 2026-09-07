@@ -9,7 +9,7 @@ module.exports = {
       "dateOfBirth",
       {
         type: Sequelize.DATEONLY,
-        allowNull: false
+        allowNull: true
       },
     )
   },
