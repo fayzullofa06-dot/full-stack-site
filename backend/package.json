@@ -4,8 +4,7 @@
     "version": "0.0.0",
     "scripts": {
         "dev": "nodemon app.js",
-"start": "npx sequelize-cli db:migrate && node app.js"
-    },
+"start": "npx sequelize-cli db:migrate --env development && node app.js"    },
     "dependencies": {
         "bcrypt": "^6.0.0",
         "cors": "^2.8.6",
