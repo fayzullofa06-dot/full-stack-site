@@ -113,13 +113,15 @@ const login= async(req,res)=>{
             message:" The password does not match"
           })
         }
+        console.log("JWT EXPIRES:", process.env.after)
         const token=jsonwebToken.sign(
           {id:user.id,email:user.email,role:user.role},
           process.env.PASSWORD,
           {
-            expiresIn:process.env.after
+            expiresIn:'1d'
           }
         )
+        console.log("JWT EXPIRES:", process.env.after)
         res.status(200).json({
           success:true,
           message:'you have logged in successfully',
