@@ -128,6 +128,10 @@ const login= async(req,res)=>{
         })
         console.log(req.headers)
     } catch (error) {
+        console.error("LOGIN ERROR:", error);
+    console.error("MESSAGE:", error.message);
+    console.error("STACK:", error.stack);
+
         console.error(error.message)
           return res.status(500).json({
             success:false,
